@@ -2,7 +2,7 @@ import { useState } from "react";
 import IncDec from "./components/IncDec";
 
 export default function App() {
-  const [user, setUser] = useState("Aryan");
+  const [user, setUser] = useState("Darling");
 
   const changeUserBtn = () => {
     console.log("Change");
