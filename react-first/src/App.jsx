@@ -4,6 +4,8 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Card } from "./components/Card";
+import axios from "./../node_modules/axios/lib/axios";
+import { useState } from "react";
 
 // export default function App() {
 //   const [user, setUser] = useState("Darling");
@@ -29,6 +31,10 @@ import { Card } from "./components/Card";
 // }
 
 export default function App() {
+  const [data, setData] = useState([]);
+
+  /** Dummy data  */
+
   const users = [
     {
       userName: "Aarav Patel",
@@ -67,13 +73,42 @@ export default function App() {
     },
   ];
 
+  //fetch data
+  const getApiData = async () => {
+    const response = await axios.get("https://picsum.photos/v2/list");
+    setData(response.data);
+    console.log("data", data);
+  };
+
   return (
     <>
       <Header />
+      {/** Dummy data  */}
       <div className="flex overflow-x-auto space-x-4 p-4">
         {users.map((user, index) => (
           <Card key={index} user={user} />
         ))}
+      </div>
+
+      <div className="py-6 px-5">
+        <button
+          onClick={getApiData}
+          className="bg-cyan-900 text-white font-semibold text-2xl px-6 py-3 rounded active:scale-95"
+        >
+          Get List
+        </button>
+        <div className="p-5 bg-gray-950">
+          {data.map(function (elem, index) {
+            return (
+              <div
+                key={index}
+                className="bg-gray-50 text-black flex items-center justify-between w-full px-6 py-6 rounded mb-0"
+              >
+                <h1>{elem.author}</h1>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <Footer />
     </>
