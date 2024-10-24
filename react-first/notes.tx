@@ -1,3 +1,7 @@
 * What is Component
 
 => Component are independent & reusable bits of code. They serve the same purpose as js functions, but work in isolation and return HTML.
+
+* What is hooks
+
+=> Special type of functions
