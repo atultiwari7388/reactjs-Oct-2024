@@ -31,8 +31,13 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
+import { useContext } from "react";
+import { DataContext } from "./context/UserContext";
 
 export default function App() {
+  const data = useContext(DataContext);
+  console.log(data);
+
   return (
     <>
       <Header />
