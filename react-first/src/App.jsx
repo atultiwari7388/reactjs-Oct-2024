@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Card } from "./components/Card";
 import axios from "./../node_modules/axios/lib/axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // export default function App() {
 //   const [user, setUser] = useState("Darling");
@@ -79,6 +79,10 @@ export default function App() {
     setData(response.data);
     console.log("data", data);
   };
+
+  useEffect(() => {
+    getApiData();
+  }, []);
 
   return (
     <>
