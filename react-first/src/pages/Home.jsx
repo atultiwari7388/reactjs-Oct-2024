@@ -7,6 +7,7 @@ import { Password } from "./../components/Password";
 import { Weather } from "./../components/Weather";
 import { UserStatus } from "../components/UserStatus";
 import { Greeting } from "./../components/Greeting";
+import { StyleCard } from "./../components/StyleCard";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -108,6 +109,7 @@ export const Home = () => {
         <Weather />
         <UserStatus isLoggedIn={true} isAdmin={true} />
         <Greeting timeOfDay="morning" />
+        <StyleCard />
       </div>
     </div>
   );
