@@ -33,6 +33,7 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { useContext } from "react";
 import { DataContext } from "./context/UserContext";
+import { Product } from "./pages/Product";
 
 export default function App() {
   const data = useContext(DataContext);
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
       <Footer />
     </>

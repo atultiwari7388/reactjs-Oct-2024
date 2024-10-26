@@ -13,6 +13,9 @@ export const Header = () => {
         <Link to="/contact" className="text-2xl">
           Contact
         </Link>
+        <Link to="/product" className="text-2xl">
+          Product
+        </Link>
       </div>
     </nav>
   );
