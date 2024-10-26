@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Card } from "./../components/Card";
 import { NewCard } from "./../components/NewCard";
+import { Cart } from "./../components/Cart";
+import { Password } from "./../components/Password";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -97,6 +99,9 @@ export const Home = () => {
             );
           })}
         </div>
+
+        <Cart />
+        <Password isValid={true} />
       </div>
     </div>
   );
