@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Card } from "./../components/Card";
+import { NewCard } from "./../components/NewCard";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -58,6 +59,18 @@ export const Home = () => {
 
   return (
     <div>
+      <NewCard>
+        <h1>This is my New Card with Children Props</h1>
+        <p>This is my Paragraph with children props</p>
+      </NewCard>
+      <NewCard>
+        <h1>This is my New Card with Children Props</h1>
+        <p>This is my Paragraph with children props</p>
+      </NewCard>
+      <NewCard>
+        <h1>This is my New Card with Children Props</h1>
+        <p>This is my Paragraph with children props</p>
+      </NewCard>
       {/** Dummy data  */}
       <div className="flex overflow-x-auto space-x-4 p-4">
         {users.map((user, index) => (
