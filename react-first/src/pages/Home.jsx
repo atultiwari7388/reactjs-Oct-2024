@@ -4,6 +4,9 @@ import { Card } from "./../components/Card";
 import { NewCard } from "./../components/NewCard";
 import { Cart } from "./../components/Cart";
 import { Password } from "./../components/Password";
+import { Weather } from "./../components/Weather";
+import { UserStatus } from "../components/UserStatus";
+import { Greeting } from "./../components/Greeting";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -102,6 +105,9 @@ export const Home = () => {
 
         <Cart />
         <Password isValid={true} />
+        <Weather />
+        <UserStatus isLoggedIn={true} isAdmin={true} />
+        <Greeting timeOfDay="morning" />
       </div>
     </div>
   );
