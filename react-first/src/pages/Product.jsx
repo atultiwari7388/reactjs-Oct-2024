@@ -1,4 +1,5 @@
 import { TodoList } from "./../components/TodoList";
+import { CopyInputPortal } from "./../components/CopyInputPortal";
 
 export const Product = () => {
   // const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ export const Product = () => {
       {/* <GenerateRandomNumber /> */}
       {/* <LocalStorageEx /> */}
       <TodoList />
+      <CopyInputPortal />
     </div>
   );
 };

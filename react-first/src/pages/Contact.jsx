@@ -1,6 +1,8 @@
 // import { useState } from "react";
 // import { UpdateArray } from "./../components/UpdateArray";
 // import UpdateObject from "./../components/UpdateObject";
+import { UserProfile } from "../components/UserProfile";
+import { UserProvider } from "../UserContext";
 import { UpdateArrayOfObject } from "./../components/UpdateArrayOfObject";
 
 export const Contact = () => {
@@ -10,7 +12,7 @@ export const Contact = () => {
   // const decrement = () => setCount(count - 1);
 
   return (
-    <div
+    <UserProvider
       style={{
         margin: "0px",
         padding: "0px",
@@ -24,7 +26,8 @@ export const Contact = () => {
 
       <UpdateArray />
       <UpdateObject /> */}
-      <UpdateArrayOfObject />
-    </div>
+      {/* <UpdateArrayOfObject /> */}
+      <UserProfile />
+    </UserProvider>
   );
 };
